@@ -1,0 +1,70 @@
+  ✔ #1 POST: Creating a new thread
+✅ MongoDB connected
+    1) #2 GET: Viewing the 10 most recent threads with 3 replies each
+    2) #3 DELETE: Deleting a thread with the incorrect password
+    3) #5 PUT: Reporting a thread
+    4) #6 POST: Creating a new reply
+    5) #7 GET: Viewing a single thread with all replies
+    6) #8 DELETE: Deleting a reply with the incorrect password
+    7) #9 DELETE: Deleting a reply with the correct password
+    8) #10 PUT: Reporting a reply
+    9) #4 DELETE: Deleting a thread with the correct password
+
+
+  1 passing (2s)
+  9 failing
+
+  1) Functional Tests
+       #2 GET: Viewing the 10 most recent threads with 3 replies each:
+     Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/home/runner/workspace/tests/2_functional-tests.js)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7)
+
+  2) Functional Tests
+       #3 DELETE: Deleting a thread with the incorrect password:
+     TypeError: getThreadId is not a function
+      at Context.<anonymous> (tests/2_functional-tests.js:43:20)
+      at process.processImmediate (node:internal/timers:483:21)
+
+  3) Functional Tests
+       #5 PUT: Reporting a thread:
+     TypeError: getThreadId is not a function
+      at Context.<anonymous> (tests/2_functional-tests.js:58:20)
+      at process.processImmediate (node:internal/timers:483:21)
+
+  4) Functional Tests
+       #6 POST: Creating a new reply:
+     TypeError: getThreadId is not a function
+      at Context.<anonymous> (tests/2_functional-tests.js:74:20)
+      at process.processImmediate (node:internal/timers:483:21)
+
+  5) Functional Tests
+       #7 GET: Viewing a single thread with all replies:
+     TypeError: getThreadId is not a function
+      at Context.<anonymous> (tests/2_functional-tests.js:92:20)
+      at process.processImmediate (node:internal/timers:483:21)
+
+  6) Functional Tests
+       #8 DELETE: Deleting a reply with the incorrect password:
+     TypeError: getThreadId is not a function
+      at Context.<anonymous> (tests/2_functional-tests.js:109:20)
+      at process.processImmediate (node:internal/timers:483:21)
+
+  7) Functional Tests
+       #9 DELETE: Deleting a reply with the correct password:
+     TypeError: getThreadId is not a function
+      at Context.<anonymous> (tests/2_functional-tests.js:126:20)
+      at process.processImmediate (node:internal/timers:483:21)
+
+  8) Functional Tests
+       #10 PUT: Reporting a reply:
+     TypeError: getThreadId is not a function
+      at Context.<anonymous> (tests/2_functional-tests.js:143:20)
+      at process.processImmediate (node:internal/timers:483:21)
+
+  9) Functional Tests
+       #4 DELETE: Deleting a thread with the correct password:
+     TypeError: getThreadId is not a function
+      at Context.<anonymous> (tests/2_functional-tests.js:161:20)
+      at process.processImmediate (node:internal/timers:483:21)
+
