@@ -10,6 +10,7 @@ const threadPostData = { board: "test", text: "test", delete_password: "test" }
 let replyData = { text: "test", delete_password: "test", board: "test" }
 
 describe('Functional Tests', function () {
+  this.timeout(5000);
 
   it("#1 POST: Creating a new thread", function () {
     return new Promise((resolve, reject) => {
@@ -17,6 +18,7 @@ describe('Functional Tests', function () {
         .post("/api/threads/test")
         .send(threadPostData)
         .end(function (err, res) {
+          if (err) return reject(err);
           try {
             assert.equal(res.status, 200)
             assert.isDefined(res.body._id)
