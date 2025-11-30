@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
+const runner = require('./test-runner');
 const helmet = require('helmet');
 const app = express();
 
@@ -32,6 +33,7 @@ app.use('/_api', (req, res, next) => {
 
 
 require('./config/db')();
+runner.run();
 require('./routes/fcctesting')(app);
 require('./routes/api')(app);
 
